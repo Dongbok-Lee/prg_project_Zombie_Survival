@@ -1,2 +1,4 @@
 ﻿  prg_project_Zombie_Survival.cpp
+C:\Users\typoo\Desktop\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\console.h(38,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\typoo\Desktop\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\console.h(38,20): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
   prg_project_Zombie_Survival.vcxproj -> C:\Users\typoo\Desktop\project\prg_project_Zombie_Survival\x64\Debug\prg_project_Zombie_Survival.exe
