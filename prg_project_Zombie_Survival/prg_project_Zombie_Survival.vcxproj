@@ -142,10 +142,12 @@
     <ClCompile Include="prg_project_Zombie_Survival.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="console.h" />
-    <ClInclude Include="event.h" />
-    <ClInclude Include="member.h" />
-    <ClInclude Include="score.h" />
+    <ClInclude Include="character_event.h" />
+    <ClInclude Include="console_event.h" />
+    <ClInclude Include="character_member.h" />
+    <ClInclude Include="score_event.h" />
+    <ClInclude Include="screen_view.h" />
+    <ClInclude Include="weapon_member.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -20,16 +20,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="console.h">
+    <ClInclude Include="console_event.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="member.h">
+    <ClInclude Include="character_member.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="score.h">
+    <ClInclude Include="score_event.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="event.h">
+    <ClInclude Include="weapon_member.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="character_event.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="screen_view.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
