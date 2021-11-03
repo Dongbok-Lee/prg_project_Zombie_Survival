@@ -13,12 +13,21 @@ int main() {
 	HERO* player;
 	player = &_player;
 
+	BULLET entire_Bullet[100];
+	int _index = 0;
+	int* index = &_index;
+	
+
 	initGame();
+	init_Entire_Bullet(entire_Bullet);
 
 	while (1) {
-		makeHero(player);
+		make_Bullet(index, entire_Bullet, player->loc_x, player->loc_y);
+		move_Bullet(entire_Bullet, player->loc_x, player->loc_y);
 
-		Sleep(30);
+		move_Hero(player, player -> loc_x, player -> loc_y);
+
+		Sleep(60);
 
 	}
 }
