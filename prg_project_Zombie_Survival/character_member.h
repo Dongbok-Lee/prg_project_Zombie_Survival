@@ -15,6 +15,10 @@ typedef struct bullet {
 }BULLET;
 
 
-//void Zombie();
+typedef struct zombie {
+	bool status;
+	int loc_x;
+	int loc_y;
+}ZOMBIE;
 //void Weapon();
 //void bullet();

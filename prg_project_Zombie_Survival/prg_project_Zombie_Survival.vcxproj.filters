@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\event">
+      <UniqueIdentifier>{776e2fd8-a668-4b47-82bf-8f8b4f876c69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\member">
+      <UniqueIdentifier>{68c4017c-9066-463d-a480-ecc5a0db96ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\screen">
+      <UniqueIdentifier>{46d6f260-53b6-4c5b-82c5-55d21bcc1277}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="prg_project_Zombie_Survival.cpp">
@@ -21,22 +30,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console_event.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="character_member.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\event</Filter>
     </ClInclude>
     <ClInclude Include="score_event.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\event</Filter>
     </ClInclude>
-    <ClInclude Include="weapon_member.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="character_event.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="character_member.h">
+      <Filter>헤더 파일\member</Filter>
     </ClInclude>
     <ClInclude Include="screen_view.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\screen</Filter>
+    </ClInclude>
+    <ClInclude Include="zombie_event.h">
+      <Filter>헤더 파일\event</Filter>
+    </ClInclude>
+    <ClInclude Include="hero_event.h">
+      <Filter>헤더 파일\event</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet_event.h">
+      <Filter>헤더 파일\event</Filter>
+    </ClInclude>
+    <ClInclude Include="common_event.h">
+      <Filter>헤더 파일\event</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
