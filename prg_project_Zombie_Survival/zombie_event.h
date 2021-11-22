@@ -9,11 +9,11 @@
 void init_Entire_Zombie(ZOMBIE*);
 void save_Zombie(int, ZOMBIE*, int ,int);
 void make_Zombie(int*, ZOMBIE*);
-void move_Zombie(ZOMBIE*, BULLET*,	int, int);
-bool zombie_is_blocked(BULLET*, int, int, int, int);
+void move_Zombie(ZOMBIE*, int, int);
+
 
 void init_Entire_Zombie(ZOMBIE* arr) {
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 200; i++) {
 		arr[i] = { false, 0, 0};
 	}
 }
@@ -26,7 +26,7 @@ void save_Zombie(int index, ZOMBIE* zombie, int x, int y) {
 
 void make_Zombie(int* index, ZOMBIE* entire_zombie) {
 
-	if (*index == 99)
+	if (*index == 200)
 		*index = 0;
 
 	srand(GetTickCount64());
@@ -35,14 +35,14 @@ void make_Zombie(int* index, ZOMBIE* entire_zombie) {
 	switch (side) {
 		case 0:
 		{
-			int rand_loc = 2*(rand() % 37)+ 2;
+			int rand_loc = 2*(rand() % 37)+ 4;
 			save_Zombie(*index, entire_zombie, rand_loc, 6);
 			*index += 1;
 			break;
 		}
 		case 1:
 		{
-			int rand_loc_1 = 2*(rand() % 37) +2;
+			int rand_loc_1 = 2*(rand() % 37) +4;
 			save_Zombie(*index, entire_zombie, rand_loc_1, 34);
 			*index += 1;
 			break;
@@ -50,7 +50,7 @@ void make_Zombie(int* index, ZOMBIE* entire_zombie) {
 		case 2:
 		{
 			int rand_loc_2 = rand() % 29 + 6;
-			save_Zombie(*index, entire_zombie, 2, rand_loc_2);
+			save_Zombie(*index, entire_zombie, 4, rand_loc_2);
 			*index += 1;
 			break;
 		}
@@ -63,47 +63,31 @@ void make_Zombie(int* index, ZOMBIE* entire_zombie) {
 		}
 	}
 }
-void move_Zombie(ZOMBIE * entire_Zombie, BULLET* entire_Bullet, int hero_x, int hero_y) {
-	for (int i = 0; i < 100; i++) {
+
+void move_Zombie(ZOMBIE * entire_Zombie, int hero_x, int hero_y) {
+	for (int i = 0; i < 200; i++) {
 		if (entire_Zombie[i].status) {
 
 			int x = entire_Zombie[i].loc_x;
 			int y = entire_Zombie[i].loc_y;
 
-			if (zombie_is_blocked(entire_Bullet, x, y, hero_x, hero_y) || is_Blocked(x, y)) {
-				entire_Zombie[i].status = false;
-				GotoXY(x, y);
-				printf("  ");
+			GotoXY(x, y);
+			printf("  ");
+
+			if (abs(hero_x - x) > abs(hero_y - y) &&  hero_x != x) {
+				x+= ((hero_x-x) / abs(hero_x - x)) * 2;
 			}
-			else {
-				GotoXY(x, y);
-				printf("  ");
-
-				if (abs(hero_x - x) > abs(hero_y - y)) {
-					x+= (hero_x-x)/ abs(hero_x - x) * 2;
-				}
-				else {
-					y += (hero_y - y) / abs(hero_y - y);
-				}
-
-				GotoXY(x, y);
-				printf("¡ß");
-
-				entire_Zombie[i].loc_x = x;
-				entire_Zombie[i].loc_y = y;
+			else if(hero_y != y){
+				y += (hero_y - y) / abs(hero_y - y);
 			}
+
+			GotoXY(x, y);
+			SetColor(0, 12);
+			printf("¡Ü");
+			SetColor(0, 15);
+			entire_Zombie[i].loc_x = x;
+			entire_Zombie[i].loc_y = y;
+			
 		}
 	}
-}
-
-bool zombie_is_blocked(BULLET* entire_Bullet,int x, int y, int hero_x, int hero_y) {
-	if (x == hero_x && y == hero_y)
-		return true;
-	for (int i = 0; i < 100; i++) {
-		if (entire_Bullet[i].loc_x == x && entire_Bullet[i].loc_y == y) {
-			return true;
-		}
-	}
-
-	return false;
 }

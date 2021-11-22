@@ -1,5 +1,5 @@
 ﻿  prg_project_Zombie_Survival.cpp
 C:\Users\typoo\Desktop\고프\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\console_event.h(16,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
 C:\Users\typoo\Desktop\고프\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\console_event.h(16,20): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
-C:\Users\typoo\Desktop\고프\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\prg_project_Zombie_Survival.cpp(14,16): warning C4244: '초기화 중': 'time_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\typoo\Desktop\고프\project\prg_project_Zombie_Survival\prg_project_Zombie_Survival\zombie_event.h(32,22): warning C4244: '인수': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   prg_project_Zombie_Survival.vcxproj -> C:\Users\typoo\Desktop\고프\project\prg_project_Zombie_Survival\x64\Debug\prg_project_Zombie_Survival.exe

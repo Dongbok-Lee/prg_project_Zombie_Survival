@@ -1,6 +1,7 @@
 #pragma once
 
 typedef struct hero{
+	bool status;
 	int loc_x;
 	int loc_y;
 	//int speed;
